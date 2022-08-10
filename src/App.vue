@@ -10,14 +10,15 @@
         @keyup="searchCoin()"
         autofocus
       />
-
+      <!-- Si se da un error al hacer un get a la api, salta este mensaje en rojo -->
       <section v-if="errored">
-        <h4 class="text-center">
+        <h4 class=" h4 text-center text-danger">
           Lo sentimos, no es posible obtener la información en este momento, por
           favor intente nuevamente mas tarde
         </h4>
       </section>
 
+    <!-- Aparece cuando mientras no se cargue toda la informacion pedida -->
       <section v-else>
         <div v-if="loading">Cargando...</div>
 
