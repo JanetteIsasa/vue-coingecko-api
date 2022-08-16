@@ -13,7 +13,8 @@
         />
       </div>
 
-      <table class="table table-dark">
+<div class="table-responsive">
+   <table class="table table-dark table-hover"  style="width: 100%">
         <thead>
           <tr>
             <th v-for="title in titles" :key="title">
@@ -43,12 +44,15 @@
                   : 'text-danger',
               ]"
             >
-              {{ coin.price_change_percentage_24h }} %
+              {{ coin.price_change_percentage_24h }}%
             </td>
             <td>$ {{ coin.total_volume.toLocaleString() }}</td>
           </tr>
         </tbody>
       </table>
+</div>
+     
+      
     </div>
   </div>
 </template>
